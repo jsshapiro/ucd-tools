@@ -49,19 +49,28 @@ ucd-tools consists of four parts:
 
 1. A collection of XML files. Primarily the XML-formatted UCD
    database, but also some additional XML files that define
-   properties not included in the XML version of the UCD.
+   properties not included in the XML version of the UCD. The
+   XML files also supply property aliases and property value aliases.
 
-2. A first-stage tool that digests the XML UCD file and any additional,
-   locally-defined properties, and produces a monolithic C++ source file
-   that contains all of this information in a single, unified place.
+   These files, along with any additional XML files that define
+   local, custom properties, will be digested by the first-stage
+   tool.
 
-3. A second stage tool that produces compact property tables for the
-   various Unicode and locally-defined properties. The tool can emit
-   these tables in various source languages, and the list of languages
-   can will grow over time.
+2. A property _compiler_ that digests the XML files and produces a
+   monolithic C++ source file that contains all of this information
+   in a single, monolithic file.
+
+   The property compiler also performs various validity and cross-version
+   stability checks.
+
+3. A property _generator_ that produces compact property tables and
+   supporting type definitions for the
+   various Unicode and locally-defined properties and their values.
+   The property generator can be extended to support additional source
+   language targets in a modular way.
 
    These tables depend in turn on a small, language-specific support
-   library.
+   library that is separately implemented for each target language.
 
 4. A support library for each of the supported source languages. The
    support library provides:
