@@ -4,7 +4,7 @@ properties and normalization in multiple source languages.
 
 ## Introduction and Rationale
 
-The Unicode Character Database is an incredibly useful and incredibly
+The Unicode Character Database is an incredibly useful and somewhat
 frustrating resource. The official state of the UCD is spread between
 multiple files having inconsistent formats. The XML version of the UCD
 omits the state of some newer properties, and also experimental properties.
