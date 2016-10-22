@@ -1,2 +1,3 @@
 # ucd-tools
-Tool to generate property tables for both official and local Unicode property definitions.
+Tools to generate property tables for both official and local Unicode
+property definitions in varous source languages.
