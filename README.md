@@ -45,13 +45,17 @@ Enter `ucd-tools`.
 
 ## What is `ucd-tools`?
 
-ucd-tools consists of three parts:
+ucd-tools consists of four parts:
 
-1. A first-stage tool that digests the XML UCD file and any additional,
+1. A collection of XML files. Primarily the XML-formatted UCD
+   database, but also some additional XML files that define
+   properties not included in the XML version of the UCD.
+
+2. A first-stage tool that digests the XML UCD file and any additional,
    locally-defined properties, and produces a monolithic C++ source file
    that contains all of this information in a single, unified place.
 
-2. A second stage tool that produces compact property tables for the
+3. A second stage tool that produces compact property tables for the
    various Unicode and locally-defined properties. The tool can emit
    these tables in various source languages, and the list of languages
    can will grow over time.
@@ -59,7 +63,7 @@ ucd-tools consists of three parts:
    These tables depend in turn on a small, language-specific support
    library.
 
-3. A support library for each of the supported source languages. The
+4. A support library for each of the supported source languages. The
    support library provides:
 
    - Language-specific type definition for Unicode code points.
